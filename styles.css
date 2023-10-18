@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap');
+
 :root{
     /**color**/
     --white:#F3F3F3;
@@ -6,10 +8,68 @@
     --bluelight:#89C8FA;
     --bluedark:#003A68;
     --purple:#9356DC;
-}
+
 /** Text configuration **/
---header-font:'Plate';
---body-font:'Plate';
---title:'Plate';
---button-font'Plate';
---section-title:'Plate';
+--header-font:'Shrikhand';
+--button-font:'Roboto';
+--section-title-font:'Roboto';
+--paragraphe-font:'Roboto';
+--typography-font:'Roboto';
+
+
+--header-font-weight: 300;
+--button-font-weight:400;
+--section-title-font-weight:700;
+--paragraphe-font-weight:300;
+--typography-font-weight:500;
+
+--header-font-size:1.8rem;
+--button-font-size:1rem;
+--section-title-font-size:1.5rem;
+--paragraphe-font-font-size:1.1rem;
+--typography-font-size:1rem;
+
+--header-line-height: 2.7rem;
+--button-line-height:1.17rem;
+--section-title-line-height:1.75rem;
+--paragraphe-font-line-height:1.3rem;
+--typography-font-line-height:1.17rem;
+}
+
+body {
+    font-family: var(--typography-font);
+    font-style:normal;
+    font-weight: var(--typography-font-weight);
+    font-size: var(--typography-font-size);
+    line-height:var(--typography-font-line-height);
+    color: var(--black);
+}
+h1 {
+    font-family: var(--header-font);
+    font-style: italic;
+    font-weight: var(--header-font-weight);
+    font-size: var(--header-font-size);
+    line-height: var(--header-line-height);
+    color: var(--black);
+}
+h2 {
+    font-family: var(--section-title-font);
+    font-style: normal;
+    font-weight: var(--section-title-font-weight);
+    font-size: var(--section-title-font-size);
+    line-height: var(--section-title-line-height);
+    color: var(--black);
+}
+
+
+/*
+coeur: <i class="fa-thin fa-heart" style="color: #000000;"></i>
+ustensils: <i class="fa-solid fa-utensils" style="color: #ffffff;"></i>
+handshake <i class="fa-solid fa-handshake-angle" style="color: #ffffff;"></i>
+location <i class="fa-solid fa-location-dot" style="color: #353535;"></i>
+mobile <i class="fa-solid fa-mobile-screen-button" style="color: #7e7e7e;"></i>
+list ul :<i class="fa-solid fa-list-ul" style="color: #7e7e7e;"></i>
+store: <i class="fa-solid fa-store" style="color: #9356dc;"></i>
+arrow <i class="fa-solid fa-arrow-left" style="color: #353535;"></i>
+check: <i class="fa-regular fa-circle-check" style="color: #99e2d0;"></i>
+*/
