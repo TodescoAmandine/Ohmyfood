@@ -1,0 +1,15 @@
+:root{
+    /**color**/
+    --white:#F3F3F3;
+    --turquoise:#99E2D0;
+    --green:#008766;
+    --bluelight:#89C8FA;
+    --bluedark:#003A68;
+    --purple:#9356DC;
+}
+/** Text configuration **/
+--header-font:'Plate';
+--body-font:'Plate';
+--title:'Plate';
+--button-font'Plate';
+--section-title:'Plate';
