@@ -1,0 +1,349 @@
+
+
+/***logo***/
+
+
+/*****image de fond*****/
+img.picture_restaurant{
+    height: 275px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+    position: relative;
+}
+
+/*****contenair menu*****/
+/****top contenair****/
+.top_container{
+    margin-top: -4rem;
+    border-radius: 2rem 2rem 0 0;
+    background-color: #f6f6f6;
+/*    z-index: 1;*/
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-left: 20px;
+}
+.top_container--title{
+font-family: 'shrikhand';
+font-weight: 400;
+font-style: italic;
+font-size: 1.7rem;
+line-height: 2.5rem;
+}
+.top_contenair--icon{
+    padding-left: 40px;
+}
+.heart_empty{
+    position: absolute;
+    font-size: 1.5rem;
+
+}
+
+.heart_full{
+    opacity:0;
+    font-size: 1.5rem;
+
+}
+.heart_full:hover{
+    font-size: 1.5rem;
+    opacity:1;
+    position: relative;
+    background-image: linear-gradient(180deg,#9356DC,#FF79DA);
+    background-clip:text;
+    -webkit-background-clip: text;
+}
+
+.h2__nodecoration{
+    text-decoration: none;
+}
+
+
+/*****menu contenair****/
+.menu__contenair{
+    margin-top: -1.2rem;
+    height: 1000px;
+    background-color: #f6f6f6;
+    padding: 15px;
+}
+.h2none{
+    text-decoration: none;
+}
+
+.h3{
+    font-weight: 500;
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+}
+
+/***card***/
+
+.menu__card{
+width: 100%;
+height: 75px;
+background-color: #ffffff;
+border-radius: 15px;
+display: flex;
+box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+
+}
+
+.menu__card--content{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.menu__card--txt{
+    flex-direction: column;
+    padding-left: 10px;
+}
+.menu__card--tarif{
+    color: #000000;
+    font-weight: 700;
+    font-size: 0.9rem;
+    line-height: 1.1rem;
+    font-family: 'roboto';
+    position: absolute;
+    padding-left: 260px;
+    padding-top: 40px;
+    transform: translate(-100%);
+
+}
+#menu__contenair--h2none{
+    text-decoration: none;
+}
+
+
+
+/****animation btn check****/
+.menu_btn{
+    margin:40px 0 0 80px;
+}
+
+.menu__card--bnt{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 80px;
+}
+
+#menu__card--bntselect{
+    display: none;
+    position: absolute;
+    font-size: 1.8rem;
+    width: 18%;
+    height: 20px;
+    text-decoration: none;
+    padding: 25px 0 30px 0;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--turquoise);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+}
+/*
+.menu__card--tarif{
+    &:hover + .menu__card--bnt {
+        transform: translate(100%, 0);
+    }
+}
+.menu__card--bnt {
+    width: 100px;
+    height: 100px;
+    transition: transform 330ms ease-in-out;
+}
+*/
+/*
+#menu__card--bntselect:hover{
+    visibility: visible;
+    position: absolute;
+    font-size: 2.2rem;
+    width: 20%;
+    height: 20px;
+    text-decoration: none;
+    padding: 30px 0 30px 0;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--turquoise);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 160px;
+    transform: translate(-100%);
+}*/
+/***animation btn tarif***/
+/*.menu__card--tarif{
+    display: flex;
+    align-items: flex-end;
+    position: absolute;
+    font-size: 1rem;
+    width: 20%;
+    height: 20px;
+    padding: 30px 0 30px 0;
+    border-radius: 0 20px 20px 0;
+    background-color: white;
+    border: solid 2px;
+}*/
+
+
+          /* #menu__card--bntselect{
+    visibility: hidden;
+        position: absolute;
+        font-size: 2.2rem;
+        width: 20%;
+        height: 20px;
+        margin-left: 120px;
+        text-decoration: none;
+        padding: 30px 0 30px 0;
+        border-radius: 0 20px 20px 0;
+        background-color: var(--turquoise);
+        display: flex;
+        justify-content: center;
+        align-items: center;*/
+
+
+
+        
+/***footer
+.footer{
+width: 100%;
+background-color: var(--greydark);
+height: 200px;
+margin-top:40px
+}
+.footer__container{
+padding-left: 20px;
+flex-direction: column;
+justify-content: left;
+list-style:none;
+padding-top: 0.1rem;
+}
+
+
+.footer__container--logo{
+color: white;
+text-decoration: none;
+font-family:'Shrikhand' ;
+font-style: normal;
+font-size:1.2rem;
+margin-bottom: 10px;
+}
+li {
+margin-top: 7px;
+color: white;
+display: flex;
+margin :10px;
+text-align:left;
+
+}
+#icone1{
+padding-left: 5px;
+margin: 0px 20px 0 0;
+}
+#icone2{
+    padding-left: 1px;
+    margin: 0px 20px 0 0;
+    }
+***/
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+@media screen and (min-width: 768px) {
+
+    body{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+    main{
+    
+    flex-direction: column;
+    align-items: center;
+    }
+
+
+    /**header**/
+.appbar--restaurant{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+.appbar__arrow{
+
+}
+.appbar__logo--restaurant{
+    width: 20%;
+}
+
+
+
+/**section menu restaurant**/
+
+.picture__restaurant{
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+.contenair{
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+.appbar__arrow{
+    left:50px;
+}
+
+.menu__card--tarif{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    font-family: Roboto;
+    font-weight: 700;
+  /*  transform: translateX(45px);
+    transition: all 0.4s;*/
+}
+}
+/*.contenair{
+    width: 80%;
+    display: flex;
+    align-items: center;
+
+}/*
+/*
+.top_container{
+margin-left: 100px;  
+width: 80%; 
+justify-content: center;
+padding: 0;
+}
+.menu__contenair{
+    margin-left: 100px;  
+    width: 80%;
+    padding: 0;
+}
+.menu__contenair h2{
+    margin-left: 20px;
+}
+.menu__contenair--h2none{
+    text-decoration: underline var(--turquoise);
+    text-underline-offset: 0.25rem;
+    text-decoration-thickness: 0.188rem;
+}
+.menu__card {
+    margin: 40px 0 0 100px;
+    height: 70px;
+    width: 80%;
+*/
+
+.footer{
+    flex-direction: row-reverse;
+}
+
+
+
+    

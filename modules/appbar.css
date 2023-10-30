@@ -1,0 +1,70 @@
+   .body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+   }
+   
+    .div__appbar{
+display: flex;
+justify-content: center;
+height: 96px;
+
+}
+.appbar__logo{
+width:20% ;
+}
+
+
+
+
+
+
+@media (max-width: 1024px) {
+
+}
+
+
+
+@media (max-width: 768px) {
+    
+
+/*****css index.html*****/
+.appbar{
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    height: 60px;
+}
+
+.appbar__logo{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 3rem 0.5rem 5rem;
+
+}
+
+
+
+
+
+/***** css la palette du goût*****/
+    .appbar--restaurant{
+        box-shadow: none;
+        height: 60px;
+        display: flex;
+        justify-items: center;
+        margin-left: 20px;
+        align-items: center;
+}
+    .appbar__logo--restaurant{
+        width: 50%;
+        margin-left: 50px;
+    }
+    #appbar__arrow{
+        font-size: 1.2rem;
+
+    }
+}
