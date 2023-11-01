@@ -5,26 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>La palette du goût</title>
     <link
-    rel="icons"
-    type="image/svg+sml"
-    href="Assets/Icons/Status=Default.svg"
-  />
-  <script
-    src="https://kit.fontawesome.com/852be4327a.js"
-    crossorigin="anonymous"
-  ></script>
+      rel="icons"
+      type="image/svg+sml"
+      href="Assets/Icons/Status=Default.svg"
+    />
+    <script
+      src="https://kit.fontawesome.com/852be4327a.js"
+      crossorigin="anonymous"
+    ></script>
 
-  <link rel="stylesheet" href="SASS/home.css" />
-  <link rel="stylesheet" href="SASS/main.css">
-  <link rel="stylesheet" href="SASS/restaurant.css">
-  <link rel="stylesheet" href="modules/appbar.css">
-  <link rel="stylesheet" href="modules/footer.css">
+    <link rel="stylesheet" href="SASS/home.css" />
+    <link rel="stylesheet" href="SASS/main.css" />
+    <link rel="stylesheet" href="SASS/restaurant.css" />
+    <link rel="stylesheet" href="modules/appbar.css" />
+    <link rel="stylesheet" href="modules/footer.css" />
   </head>
 
   <body>
-    <header >
+    <header>
       <div class="appbar--restaurant">
-        <a href="index.html"><i id="appbar__arrow" class="fa-solid fa-arrow-left" style="color: #353535;"></i></a>
+        <a href="index.html"
+          ><i
+            id="appbar__arrow"
+            class="fa-solid fa-arrow-left"
+            style="color: #353535"
+          ></i
+        ></a>
         <img
           src="Assets/images/logo/ohmyfood@2x.svg"
           alt="logo ohmyfood"
@@ -32,83 +38,114 @@
         />
       </div>
     </header>
-<main>
-<div class="menu">
-    <img  class="picture_restaurant" src="Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="">
-  <div class="contenair">
-        <div class="top_container">       
-             <h1 class="top_container--title">La palette du goût</h1>
-             <div class="top_contenair--icon">
-              <i class="fa-solid fa-heart heart_empty x2" style="color: grey;"></i>
-              <i class="fa-solid fa-heart heart_full x2" style="color: #FF79DA;"></i>
-               </div>
-        </div>
-        <!--section entrées-->
-        <div class="menu__contenair">
-                <h2><span class="menu__contenair--h2none">ENTR</span>ÉES</h2>
-                <!--card1-->
-                <article class="menu__card">
-                  <div class="menu__card--content">
-                    <div class="menu__card--txt">
-                        <h3 class="h3">Fricassée d'escargots</h3>
-                        <p id="menu__card--description">Au piment d'Espelette</p>
-                    </div>
-                    <div class="menu__card--tarif">
-                      <p><strong>25 €</strong></p>
-                    </div>
-                  </div>
-                    <div class="menu__card--bnt">
-                        <i id="menu__card--bntselect" class="fa-regular fa-circle-check" style="color: white;"></i>
-                    </div>
-                  </article>
-
-        </div>
-    </div>
-  </div>
-</div>
-
-
-
-
-
-
-
-
-</main>
-<footer class="footer">
-  <div class="footer__container">
-          <div>
-            <ul class="footer__container">
-              <li><a  class="footer__container--logo" href="">ohmyfood</a></li>
-          </div>
-          <li><i  id="icone1" class="fa-solid fa-utensils" style="color: #ffffff;"></i>Proposer un restaurant</li>
-          <li><i id="icone2" class="fa-solid fa-handshake-angle" style="color: #ffffff;"></i>Devenir partenaire</li>
-          <li>Mentions légales</li>
-          <li>Contact</li>
-      </ul>
-  </div>
-</footer>
-
-
-
-
-
-
-
-  </body>
-  <!--
-  <footer class="footer">
-    <div class="footer__container">
-            <div>
-              <ul class="footer__container">
-                <li><a  class="footer__container--logo" href="">ohmyfood</a></li>
+    <main>
+      <div class="menu">
+        <img
+          class="picture_restaurant"
+          src="Assets/images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg"
+          alt=""
+        />
+        <div class="contenair">
+          <div class="top_container">
+            <h1 id="top_container--title">La palette du goût</h1>
+            <div class="top_contenair--icon">
+              <i
+                class="fa-regular fa-heart heart_empty x2"
+                style="color: black"
+              ></i>
+              <i
+                class="fa-solid fa-heart heart_full x2"
+                style="color: #ff79da"
+              ></i>
             </div>
-            <li><i  id="icone1" class="fa-solid fa-utensils" style="color: #ffffff;"></i>Proposer un restaurant</li>
-            <li><i id="icone2" class="fa-solid fa-handshake-angle" style="color: #ffffff;"></i>Devenir partenaire</li>
-            <li>Mentions légales</li>
-            <li>Contact</li>
-        </ul>
-    </div>
-    -->
-</footer>
+          </div>
+          <!--section entrées-->
+          <div class="menu__container">
+            <h2><span id="menu__container--h2none">ENTR</span>ÉES</h2>
+            <!--card1-->
+            <article class="menu__card">
+              <div class="menu__card--content">
+                <div class="menu__card--txt">
+                  <h3 id="menu__card--h3">Fricassée d'escargots</h3>
+                  <p id="menu__card--description">Au piment d'Espelette</p>
+                </div>
+                <div class="menu__card--tarif">
+                  <p id="menu__card--p">25 €</p>
+                </div>
+              </div>
+              <!--
+              <div class="menu__card--check">
+                <i class="fa-regular fa-circle-check" style="color: white"></i>
+              </div>-->
+            </article>
+            <!--card2-->
+            <article class="menu__card">
+              <div class="menu__card--content">
+                <div class="menu__card--txt">
+                  <h3 id="menu__card--h3">Foie gras de canard mi-cuit</h3>
+                  <p id="menu__card--description">
+                    Et ses copeaux de truffe noire
+                  </p>
+                </div>
+              <div class="menu__card--tarif">
+                  <p id="menu__card--p">35 €</p>
+                </div>
+              </div>
+              <!--
+              <div class="menu__card--check">
+                <i class="fa-regular fa-circle-check" style="color: white"></i>
+              </div>-->
+            </article>
+            <!--card3-->
+            <article class="menu__card">
+              <div class="menu__card--content">
+                <div class="menu__card--txt">
+                  <h3 id="menu__card--h3">Fricassée d'escargots</h3>
+                  <p id="menu__card--description">Au piment d'Espelette</p>
+                </div>
+              <!--  <div class="menu__card--tarif">
+                  <p id="menu__card--p">20€</p>
+                </div>
+              </div>
+              
+              <div class="menu__card--check">
+                <i class="fa-regular fa-circle-check" style="color: white"></i>
+              </div>-->
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__container">
+        <div>
+          <ul class="footer__container">
+            <li><a class="footer__container--logo" href="#">ohmyfood</a></li>
+            <li>
+              <a href="#">
+                <i
+                  id="icone1"
+                  class="fa-solid fa-utensils"
+                  style="color: #ffffff"
+                ></i
+                >Proposer un restaurant</a
+              >
+            </li>
+            <li>
+              <a href="#">
+                <i
+                  id="icone2"
+                  class="fa-solid fa-handshake-angle"
+                  style="color: #ffffff"
+                ></i
+                >Devenir partenaire</a
+              >
+            </li>
+            <li><a href="#">Mentions légales</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+  </body>
 </html>

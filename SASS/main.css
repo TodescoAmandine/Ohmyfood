@@ -36,6 +36,7 @@
 --subtitle-font:'Roboto';
 --body-font:'Roboto';
 --bodygras-font:'Roboto';
+--li-font:'Roboto';
 
 
 --header-font-weight: 300;
@@ -44,6 +45,7 @@
 --subtitle-font-weight:700;
 --body-font-weight:300;
 --bodygras-font-weight:500;
+--li-font-weight:400;
 
 --header-font-size:1.8rem;
 --button-font-size:1rem;
@@ -51,6 +53,7 @@
 --subtitle-font-size:1.2rem;
 --body-font-font-size:0.9rem;
 --bodygras-font-size:1rem;
+--li-font-size:1rem;
 
 --header-line-height: 2.7rem;
 --button-line-height:1.17rem;
@@ -58,6 +61,7 @@
 --subtitle-line-height:1.3rem;
 --body-font-line-height:1.3rem;
 --bodygras-font-line-height:1.1rem;
+--li-font-line-height:1.1rem;
 }
 
 .body {
@@ -88,7 +92,10 @@ h1 {
     font-size: var(--title-font-size);
     line-height: var(--title-line-height);
     color: var(--black);
+
+
 }
+
 
 h2{
     font-family:var(--subtitle-font);
@@ -123,19 +130,19 @@ p{
    font-size: var(--body-font-font-size);
    color: black;
 }
-ul{
-    font-family:var(--bodygras-font) ;
+li{
+    font-family:var(--li-font) ;
     font-style: normal;
-    font-weight:var(--body-font-weight) ;
-    font-size:var(--bodygras-font-size) ;
+    font-weight:var(--li-font-weight) ;
+    font-size:var(--li-font-size) ;
     color: white;
-    line-height: var(--bodygras-font-line-height);
+    line-height: var(--li-font-line-height);
 }
 
 
 
 
 /* Small devices (phones, less than 768px) */
-@media (max-width: 767.98px) {
+@media (min-width: 767.98px) {
     
 }

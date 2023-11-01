@@ -6,27 +6,45 @@
    }
    
     .div__appbar{
-display: flex;
-justify-content: center;
-height: 96px;
+    display: flex;
+    justify-content: center;
+    height: 96px;
 
 }
 .appbar__logo{
-width:20% ;
+    width:50% ;
 }
 
 
 
 
 
+/***** css la palette du goût*****/
+.appbar--restaurant{
+    box-shadow: none;
+    height: 60px;
+    display: flex;
+    justify-items: center;
+    margin-left: 20px;
+    align-items: center;
+}
+.appbar__logo--restaurant{
+    width: 50%;
+    margin-left: 50px;
+}
+#appbar__arrow{
+    font-size: 1.2rem;
 
-@media (max-width: 1024px) {
+}
+
+
+@media (min-width: 1024px) {
 
 }
 
 
 
-@media (max-width: 768px) {
+@media (min-width: 768px) {
     
 
 /*****css index.html*****/
@@ -39,32 +57,20 @@ width:20% ;
 }
 
 .appbar__logo{
-    width: 50%;
+    width: 15%;
     display: flex;
     justify-content: center;
-    margin: 1rem 3rem 0.5rem 5rem;
+}
+.appbar--restaurant{
+height: 95px;
 
+}
+
+.appbar__logo--restaurant{
+    width: 20%;
+    margin-left: 500px;
 }
 
 
 
-
-
-/***** css la palette du goût*****/
-    .appbar--restaurant{
-        box-shadow: none;
-        height: 60px;
-        display: flex;
-        justify-items: center;
-        margin-left: 20px;
-        align-items: center;
-}
-    .appbar__logo--restaurant{
-        width: 50%;
-        margin-left: 50px;
-    }
-    #appbar__arrow{
-        font-size: 1.2rem;
-
-    }
 }
