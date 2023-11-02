@@ -3,7 +3,11 @@
 /*pages*/
 @import 'home.css';
 @import 'appBar.css';
-
+::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 :root{
     /**color**/
@@ -137,6 +141,8 @@ li{
     font-size:var(--li-font-size) ;
     color: white;
     line-height: var(--li-font-line-height);
+    text-decoration: none;
+
 }
 
 

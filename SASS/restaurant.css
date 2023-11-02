@@ -1,5 +1,11 @@
 
+/**reglages marges**/
 
+*::before,::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 /***logo***/
 
 
@@ -12,11 +18,13 @@ img.picture_restaurant{
 }
 
 /*****contenair menu*****/
-/****top contenair****/
+
+/****topcontenair****/
 .contenair {
     border-radius: 2rem 2rem 0 0;
     background-color: #f6f6f6;
     transform: translateY(-40px);
+    padding-bottom: 50px;
 }
 .top_container{
     display: flex;
@@ -38,6 +46,8 @@ img.picture_restaurant{
     top:8px;
     font-size: 25px;
 }
+ /**container**/
+
 .menu__container{
     margin: 0 0 0 10px;
 }
@@ -47,60 +57,114 @@ img.picture_restaurant{
     text-underline-offset: 0.25rem;
     text-decoration-thickness: 0.188rem;
 }
+/**cards**/
 .menu__card{
     border-radius: 20px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     background-color: var(--greylight);
     width:auto;
-    margin: 0 10px 0 0;
+    margin: 10px 10px 0 0;
     display: flex;
     flex-direction: column;
-    
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 350px;
+    grid-template-rows: 70px;
 }
 .menu__card--content{
-    display: flex;
+ /*   display: flex;*/
     flex-direction: row;
     padding: 10px 0 0 10px;
-    
 }
 #menu__card--h3{
     font-family: 'roboto';
     font-size: 1.1rem;
-    line height: 21.09px;
+    line-height: 21px;
     font-weight: 500;
     display: inline;
 }
 #menu__card--p{
     font-family: 'roboto';
     font-size: 0.9rem;
-    line height: 17px;
+    line-height: 17px;
     font-weight:700;   
 }
 .menu__card--tarif{
     position: absolute;
-    top: 155px;
-    right: 30px;
-  /*  transform: translateX(0);*/
+    display: flex;
+    justify-content: right;
+    /*top: 155px;
+    right: 30px;*/
+   transform: translateX(300px);
+   top:30px;
 }
-.menu__card--tarif:hover{
-transform: translateX(-50px);
+/**animation btn check**/
+
+#menu__card{
+    cursor: pointer;
+    overflow: hidden;
+
+}
+/*
+.menu__card--check{
+    position: absolute;
+    font-size: 1.8rem;
+    width: 18%;
+    height: 15px;
+    text-decoration: none;
+    padding: 25px 0 30px 0;
+    border-radius: 0 20px 20px 0;
+    background-color: var(--turquoise);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+*/
+
+
+
+/**btn commander**/
+
+.commander{
+    margin: 50px;
 }
 
+#commander__button{
+    text-decoration: none;
+    margin: 20px 0px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-family: 'roboto';
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(0deg,#9356DC,#FF79DA);
+    margin: 60px;
+}
+
+/**footer**/
+.footer{
+    transform: translateY(-80px);
+}
 
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 @media screen and (min-width: 768px) {
 
-
+/**container**/
 .contenair{
     margin:0 200px ;
-
+    padding-bottom: 50px;
 }
 
 .top_container{
     margin:0 200px;
     padding: 30px 0;
     display: flex;
+  /*display: grid;*/
     justify-content: center;
     
 }
@@ -108,21 +172,42 @@ transform: translateX(-50px);
     padding-left: 60px;
 
 }
+
+/**cards**/
+
+.menu{
+    display: grid;
+}
 .menu__container{
     margin: 0 200px;
-    position: relative;
-
-
+    display: grid;
+    grid-template-columns: 635px;
+    grid-template-rows: 70px;
 }
-.menu__card--tarif{
-   margin:60px 200px 0 0;
-   position: absolute;
 
-}
 
 .menu__card{ 
   margin:10px 0 0 0;
-
+}
+.menu__card--tarif{
+   /* justify-content: flex-end;*/
+    left:280px
 
 }
 
+
+
+
+/**animation btn commander**/
+.commander{
+display: flex;
+justify-content: center;
+transition: 50ms;
+
+&:hover{
+    opacity: 0.85;
+}
+}
+
+
+}

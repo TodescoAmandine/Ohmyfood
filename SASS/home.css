@@ -24,9 +24,10 @@ body{
     align-items: flex-start;
     background-color:var(--grey);
     padding-left: 30px;
-
-
 }
+/*fa-location-dot{
+    color: #353535"
+}*/
 .appbar__nav--i{
     position: absolute;
 }
@@ -59,6 +60,9 @@ body{
     background-color: #fafafa;
     padding-top: 50px;
 }
+.explore__h1{
+    text-align: center;
+}
 .explore__h2{
     margin-bottom: 0;
 }
@@ -66,6 +70,8 @@ body{
     margin-top: 0;
     padding-bottom: 30px;
 }
+
+/**anim btn explore**/
 .explore__button{
     text-decoration: none;
     margin: 20px 0px;
@@ -77,8 +83,12 @@ body{
     color: white;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     background-image: linear-gradient(0deg,#9356DC,#FF79DA);
-}
+    transition: 50ms;
 
+    &:hover{
+        opacity: 0.85;
+    }
+}
     /**fontionnement**/
 .choose{
     display: flex;
@@ -201,9 +211,10 @@ img.restaurant__card--image{
     margin-right: 20px;
 }
 
-/***heart ***/ 
+/***anim heart ***/ 
 .heart_empty{
     position: absolute;
+    style="color: #0d0d0d;"
 }
 
 .heart_full{
@@ -212,6 +223,7 @@ img.restaurant__card--image{
 }
 .heart_full:hover{
     opacity:1;
+    color: #FF79DA;
     position: relative;
     background-image: linear-gradient(180deg,#9356DC,#FF79DA);
     background-clip:text;
@@ -253,6 +265,14 @@ img.restaurant__card--image{
 .choose{
     display: flex;
 
+}
+
+ol.choose__select {
+    padding-inline-start: 20px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 100px;
+    justify-content: space-around;
 }
 
 ol li::before{
