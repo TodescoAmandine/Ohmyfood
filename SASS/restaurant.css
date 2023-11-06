@@ -6,8 +6,9 @@
     padding: 0;
     box-sizing: border-box;
 }
-/***logo***/
 
+
+/*********CSS LA PALETTE DU GOÛT MOBILE******/
 
 /*****image de fond*****/
 img.picture_restaurant{
@@ -26,13 +27,13 @@ img.picture_restaurant{
     transform: translateY(-40px);
     padding-bottom: 50px;
 }
-.top_container{
+.container__top{
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
 }
-#top_container--title{
+#container1__top--title{
     margin: 0;
     padding: 20px 0 0 20px;
     font-family: 'shrikhand';
@@ -40,13 +41,13 @@ img.picture_restaurant{
     font-size: 1.7rem;
     line-height: 2.5rem;
 }
-.top_contenair--icon{
+.contenair__top--icon{
     position: relative;
     right:35px;
     top:8px;
     font-size: 25px;
 }
- /**container**/
+ /******* SECTION ENTRéES MOBILE**/
 
 .menu__container{
     margin: 0 0 0 10px;
@@ -57,7 +58,7 @@ img.picture_restaurant{
     text-underline-offset: 0.25rem;
     text-decoration-thickness: 0.188rem;
 }
-/**cards**/
+/********cards ENTRéES**/
 .menu__card{
     border-radius: 20px;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
@@ -71,8 +72,9 @@ img.picture_restaurant{
     display: grid;
     grid-template-columns: 350px;
     grid-template-rows: 70px;
+
 }
-.menu__card--content{
+.menu__card__content{
  /*   display: flex;*/
     flex-direction: row;
     padding: 10px 0 0 10px;
@@ -90,7 +92,7 @@ img.picture_restaurant{
     line-height: 17px;
     font-weight:700;   
 }
-.menu__card--tarif{
+.menu__card__content--tarif{
     position: absolute;
     display: flex;
     justify-content: right;
@@ -101,13 +103,18 @@ img.picture_restaurant{
 }
 /**animation btn check**/
 
-#menu__card{
+.menu__card{
+    position: relative;
     cursor: pointer;
     overflow: hidden;
+        /**animation du btn**/
+        &:hover + .menu__card--check{
+            transform: translateX(50px)
+         }
 
 }
-/*
-.menu__card--check{
+
+.menu__card__content--check{
     position: absolute;
     font-size: 1.8rem;
     width: 18%;
@@ -120,8 +127,9 @@ img.picture_restaurant{
     justify-content: center;
     align-items: center;
     overflow: hidden;
+    transition: transform 330ms ease-in-out;
 }
-*/
+
 
 
 
@@ -160,7 +168,7 @@ img.picture_restaurant{
     padding-bottom: 50px;
 }
 
-.top_container{
+.container__top{
     margin:0 200px;
     padding: 30px 0;
     display: flex;
@@ -168,7 +176,7 @@ img.picture_restaurant{
     justify-content: center;
     
 }
-.top_contenair--icon{
+.contenair__top--icon{
     padding-left: 60px;
 
 }
@@ -189,7 +197,7 @@ img.picture_restaurant{
 .menu__card{ 
   margin:10px 0 0 0;
 }
-.menu__card--tarif{
+.menu__card__content--tarif{
    /* justify-content: flex-end;*/
     left:280px
 

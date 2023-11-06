@@ -1,0 +1,17 @@
+/* Error: "&" may only used at the beginning of a compound selector.
+ *     ,
+ * 104 |     ol&__select
+ *     |       ^
+ *     '
+ *   SASS\home.sass 104:7  root stylesheet */
+
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: 'Error: "&" may only used at the beginning of a compound selector.\a     \2577 \a 104 \2502      ol&__select\d\a     \2502        ^\a     \2575 \a   SASS\\home.sass 104:7  root stylesheet';
+}

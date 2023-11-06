@@ -1,3 +1,5 @@
+/******appbar index.html version mobile*****/   
+   
    .body{
     margin: 0;
     padding: 0;
@@ -12,13 +14,13 @@
     position: relative;
     height: 60px;
 }
-    .div__appbar{
+    .appbar__container{
     display: flex;
     justify-content: center;
     height: 96px;
 
 }
-.appbar__logo{
+.appbar__container--logo{
     width:50% ;
 }
 
@@ -26,8 +28,8 @@
 
 
 
-/***** css la palette du goût*****/
-.appbar--restaurant{
+/***** appbar la palette du goût version mobile*****/
+.appbar__restaurant{
     box-shadow: none;
     height: 60px;
     display: flex;
@@ -35,12 +37,13 @@
     margin-left: 20px;
     align-items: center;
 }
-.appbar__logo--restaurant{
+.appbar__restaurant__logo--resto{
     width: 50%;
     margin-left: 50px;
 }
 #appbar__arrow{
     font-size: 1.2rem;
+    color: #353535;
 
 }
 
@@ -54,7 +57,7 @@
 @media (min-width: 768px) {
     
 
-/*****css index.html*****/
+/*****appbar index.html version desktop *****/
 .appbar{
     display: flex;
     flex-direction: column;
@@ -63,17 +66,20 @@
     height: 60px;
 }
 
-.appbar__logo{
+.appbar__container--logo{
     width: 15%;
     display: flex;
     justify-content: center;
 }
-.appbar--restaurant{
+
+
+/**** appbar la palette du goût version desktop******/
+.appbar__restaurant{
 height: 95px;
 
 }
 
-.appbar__logo--restaurant{
+.appbar__restaurant__logo--resto{
     width: 20%;
     margin-left: 500px;
 }
