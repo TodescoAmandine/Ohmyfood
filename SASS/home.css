@@ -157,7 +157,7 @@ ol.choose__select {
 
 .restaurant__container{
     display: grid;
-grid-template-columns: 346px;
+    grid-template-columns: 346px;
 }
 .restaurant__card{
     height: 280px;
@@ -214,7 +214,7 @@ img.restaurant__card--image{
 /***anim heart ***/ 
 .heart_empty{
     position: absolute;
-    style="color: #0d0d0d;"
+    color: #0d0d0d;
 }
 
 .heart_full{

@@ -1,53 +1,74 @@
-   .body{
+   body{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 
    }
-   
-   .appbar{
+
+/******variables******/
+
+$flex-center:
+    display: flex;
+    justify-items: center;
+
+
+
+
+/******sass pour appbar Index.html version mobile******/
+
+.appbar{
     display: flex;
     flex-direction: column;
     box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
     position: relative;
     height: 60px;
 }
-    .div__appbar{
-    display: flex;
-    justify-content: center;
-    height: 96px;
 
+.div__appbar{
+        height: 96px;
+        $flex-center;
+
+/* display: flex;
+justify-content: center;*/
 }
+
 .appbar__logo{
     width:50% ;
+    $flex-center;
+    display: flex;
+justify-content: center;
 }
 
 
 
 
 
-/***** css la palette du goût*****/
+/***** sass pour la palette du goût version mobile*****/
+
 .appbar--restaurant{
     box-shadow: none;
     height: 60px;
-    display: flex;
-    justify-items: center;
     margin-left: 20px;
     align-items: center;
+$flex-center;
+/*display: flex;
+justify-items: center;*/
+
+
+    &__logo--restaurant{
+        width: 50%;
+        margin-left: 50px;
+    }
 }
-.appbar__logo--restaurant{
-    width: 50%;
-    margin-left: 50px;
-}
+
+
 #appbar__arrow{
     font-size: 1.2rem;
 
 }
 
 
-@media (min-width: 1024px) {
 
-}
 
 
 
@@ -63,11 +84,17 @@
     height: 60px;
 }
 
-.appbar__logo{
-    width: 15%;
-    display: flex;
-    justify-content: center;
+    &__logo{
+        width: 15%;
+    $flex-center
+    /* display: flex;
+    justify-content: center;*/
+    }
 }
+
+/****restaurant la palette du goût****/
+
+
 .appbar--restaurant{
 height: 95px;
 
@@ -80,4 +107,4 @@ height: 95px;
 
 
 
-}
+

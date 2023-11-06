@@ -1,0 +1,342 @@
+
+
+/*************************************variables & Mixins*******************************/
+
+$flex-center:
+    display: flex;
+    justify-items: center;
+
+$flex-all-center:
+    display: flex;
+    justify-items: center;
+    align-items: center;
+
+@mixin shadow card {
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    background-color: var(--greylight);
+    color: black;
+
+}
+
+
+/***************************************header********************************/
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/****************bar_nav***************************/
+
+.bar__nav{
+    padding-top: 20px;
+    $flex-center:
+    flex-direction: row;
+    align-content: center;
+    align-items: flex-start;
+    background-color:var(--grey);
+    padding-left: 30px;
+}
+/*fa-location-dot{
+    color: #353535"
+}*/
+.appbar__nav--i{
+    position: absolute;
+}
+
+#bar__nav--location{
+    border: none;
+    background-color: transparent;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    font-family: 'roboto';
+    color: #353535;
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.1rem;
+}
+
+.h2__nodecoration{
+    text-decoration: none;
+    margin: 0 30px;
+    font-size: 18px;
+    margin-top: 30px;
+    text-align: center;
+}
+.explore{
+    margin: 0;
+    background-color: var(--greylight);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #fafafa;
+    padding-top: 50px;
+
+    &__h1{
+        text-align: center;
+    }
+        &__h2{
+            margin-bottom: 0;
+        }
+            &__h3{
+                margin-top: 0;
+                padding-bottom: 30px;
+            }
+}
+
+/********************anim btn explore*********************/
+
+.explore__button{
+    text-decoration: none;
+    margin: 20px 0px;
+    padding: 15px 30px;
+    border-radius: 100px;
+    font-family: 'roboto';
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    background-image: linear-gradient(0deg,#9356DC,#FF79DA);
+    transition: 50ms;
+
+        &:hover{
+            opacity: 0.85;
+        }
+}
+
+
+    /********************fontionnement**************************/
+
+.choose{
+    $flex-center:
+    flex-direction: column;
+    padding: 0 10px;
+}
+
+ol.choose__select {
+    padding-inline-start: 20px;
+}
+
+
+.choose__select--btn{
+    width: 77%;
+    text-decoration: none;
+    margin: 10px 0px;
+    padding: 30px 30px;
+    border-radius: 20px;
+   /* background-color: var(--purple);*/
+   @include shadow card
+    /* box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);*/
+    font-family: 'roboto';
+    font-size: 1rem;
+    font-weight: 500;
+    line-height: 1.1rem;
+
+}
+#choose__select--icon{
+    padding-left: 5px;
+    margin: 0px 20px 0 0;
+    }
+
+/***counter***/   
+
+  ol li {
+    counter-increment: compteur;
+ 
+    ol li::before {
+        margin-right: 1rem;
+        content: "" counter(compteur);
+        color: white;
+        background: #9356DC;
+        border-radius: 50%;
+        width: 25px;
+        height: 25px;
+        $flex-all-center;
+        position: absolute;
+        left: 20px;
+    }
+ }
+
+
+
+/*************restaurants cards index*******************/
+
+.restaurant{
+    padding: 0 17.5px;
+
+    &__container{
+        display: grid;
+        grid-template-columns: 346px;
+    }
+        &__card{
+            height: 280px;
+            width: 100%;
+            margin-top: 30px;
+            justify-content: space-between;
+            background-color: white;
+            border-radius: 20px;
+            filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
+        }
+
+
+        &__card--nouveau{
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            $flex-center;
+            align-items: center;
+            background-color: #99e2d0;
+            width: 80px;
+            height: 30px;
+            border-radius: 5px;
+        }
+
+        &__card--content{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            box-sizing: border-box;
+            margin-top: 10px;
+        }
+
+        &__card--text{
+            display: flex;
+            flex-direction: column;
+            margin: 0 20px 0 20px;
+        }
+
+        &__card--subtitle{
+            margin-top: 5px;
+            margin-bottom: 4px;
+        }
+        &__card--txt{
+            margin: 0;
+        }
+
+        &__card--icon{
+            margin-right: 20px;
+        }
+}
+
+img.restaurant__card--image{
+    height: 200px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+
+/*******************anim heart **************************/ 
+
+.heart_empty{
+    position: absolute;
+    style="color: #0d0d0d;"
+}
+    heart_full{
+        opacity:0;
+    
+        &_full:hover{
+            opacity:1;
+            color: #FF79DA;
+            position: relative;
+            background-image: linear-gradient(180deg,#9356DC,#FF79DA);
+            background-clip:text;
+            -webkit-background-clip: text;
+        }
+}
+
+
+
+/* Le code ci-dessous correspond à la version responsive uniquement */
+
+@media screen and (min-width: 768px) {
+
+
+
+.body{
+    display: flex;
+    box-sizing: border-box;
+}
+.bar__nav{
+    height: 50px;
+    font-size: 1rem;
+    line-height: 1.1rem;
+    font-weight: 500;
+    font-family: 'roboto';
+}
+.explore{
+    height: auto;
+    
+
+    .&__h1{
+        text-align: center;
+        margin: 0 50px;
+    }
+}
+
+
+ol.choose__select {
+    padding-inline-start: 20px;
+    display: grid;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 100px;
+    justify-content: space-around;
+}
+
+ol li::before{
+    left: -12px;
+}
+
+.choose{
+    $flex-center:
+    flex-direction: column;
+    padding: 0 180px;
+
+    &__select{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+    }
+
+        &__select--btn{
+            position: relative;
+        }
+}
+
+.restaurant{
+    padding: 0 180px;
+
+    &__container{
+        width: 100%;
+        display: flex;
+        flex-direction:row;
+
+    }
+
+    .&__container--style{
+        display: grid;
+        grid-template-columns: 500px 500px;
+        grid-template-rows: 230px;
+        justify-content: center;
+        align-content: center;
+        gap:100px 50px;
+    }
+}
+
+/*
+.restaurant__container{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}*/
+
+.footer{
+    display: flex;
+    flex-direction: row;
+}
+
+}
+
+
+
