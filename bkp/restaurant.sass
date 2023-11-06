@@ -1,24 +1,13 @@
 /****mixins*****/
-@mixin shadow card
-    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25)
-    background-color: var(--greylight)
-    color: black
+
 
 /**reglages marges**/
 
-*::before,::after
-    margin: 0
-    padding: 0
-    box-sizing: border-box
+
 
 /***logo***/
 
 /*****image de fond*****/
-img.picture_restaurant
-    height: 275px
-    width: 100%
-    object-fit: cover
-    border-radius: 20px 20px 0 0
 
 /*****contenair menu*****/
 
@@ -78,18 +67,9 @@ img.picture_restaurant
             flex-direction: row
             padding: 10px 0 0 10px
 
-#menu__card--h3
-    font-family: 'roboto'
-    font-size: 1.1rem
-    line-height: 21px
-    font-weight: 500
-    display: inline
+#menu__card
 
-#menu__card--p
-    font-family: 'roboto'
-    font-size: 0.9rem
-    line-height: 17px
-    font-weight: 700
+#menu__card
 
 .menu__card__content--tarif
     position: absolute
@@ -101,8 +81,7 @@ img.picture_restaurant
 
 /**animation btn check**/
 .menu__card
-    cursor: pointer
-    overflow: hidden
+
 
 /*
 .menu__card--check
@@ -142,46 +121,49 @@ img.picture_restaurant
     transform: translateY(-80px)
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
-@media screen and (min-width: 768px)
+@media screen and (min-width: 768px) {
 
-/**container**/
-.contenair
-    margin: 0 200px
-    padding-bottom: 50px
 
-.container__top
-    margin: 0 200px
-    padding: 30px 0
-    display: flex
-  /*display: grid;*/
-    justify-content: center
-
-.contenair__top--icon
-    padding-left: 60px
-
-/**cards**/
-
-.menu
-    display: grid
-
-    &__container
+    /**container**/
+    .contenair
         margin: 0 200px
+        padding-bottom: 50px
+
+    .container__top
+        margin: 0 200px
+        padding: 30px 0
+        display: flex
+      /*display: grid;*/
+        justify-content: center
+
+    .contenair__top--icon
+        padding-left: 60px
+
+    /**cards**/
+
+    .menu
         display: grid
-        grid-template-columns: 635px
-        grid-template-rows: 70px
 
-    &__card
-        margin: 10px 0 0 0
+        &__container
+            margin: 0 200px
+            display: grid
+            grid-template-columns: 635px
+            grid-template-rows: 70px
 
-        &--tarif
-    /* justify-content: flex-end;*/
-            left: 280px
+        &__card
+            margin: 10px 0 0 0
 
-/**animation btn commander**/
-.commander
-    display: flex
-    justify-content: center
-    transition: 50ms
+            &--tarif
+        /* justify-content: flex-end;*/
+                left: 280px
 
-&:hover
-    opacity: 0.85
+    /**animation btn commander**/
+    .commander
+        display: flex
+        justify-content: center
+        transition: 50ms
+
+    &:hover
+        opacity: 0.85
+
+        }

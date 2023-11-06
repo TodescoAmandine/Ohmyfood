@@ -1,0 +1,67 @@
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/******SASS pour appbar Index.html MOBILE******/
+
+.appbar {
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+    position: relative;
+    height: 60px;
+
+    &__container {
+        height: 96px;
+        @include flex-center;
+
+        &--logo {
+            width: 50%;
+            @include flex-center;
+        }
+    }
+}/***** SASS pour la palette du goût MOBILE*****/
+
+.appbar__restaurant {
+    box-shadow: none;
+    height: 60px;
+    margin-left: 20px;
+    align-items: center;
+    @include flex-center;
+
+    &__logo--resto {
+        width: 50%;
+        margin-left: 50px;
+    }
+}
+#appbar__arrow {
+    font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+    /*****SASS index.html DESKTOP*****/
+    .appbar {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+        position: relative;
+        height: 60px;
+
+        &__container--logo {
+            width: 15%;
+            @include flex-center;
+        }
+    }/**** SASS restaurant la palette du goût DESKTOP****/
+
+    .appbar__restaurant {
+        height: 95px;
+
+        &__logo--resto {
+            width: 20%;
+            margin-left: 500px;
+        }
+    }
+}
+

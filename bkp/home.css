@@ -168,7 +168,7 @@ ol.choose__container__select {
     display: grid;
     grid-template-columns: 346px;
 }
-.restaurant__container__card{
+.restaurant__container__card {
     height: 280px;
     width: 100%;
     margin-top: 30px;
