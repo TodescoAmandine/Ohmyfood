@@ -56,7 +56,7 @@
 }
 
 /******SASS FOOTER DESKTOP******/
-@media (min-width: 768px) {
+@media screen and (min-width: 768px) {
 
   .footer {
     display: flex;
@@ -67,9 +67,11 @@
       display: flex;
       flex-direction: row-reverse;
 
-      &--li {
+      &__liste {
         display: flex;
         flex-direction: row-reverse;
+        align-items: baseline;
+        
       }
     }
   }

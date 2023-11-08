@@ -30,14 +30,17 @@ body {
     margin-left: 20px;
     align-items: center;
     @include flex-center;
+    gap:60px;
+    justify-content: flex-start;
 
     &__logo--resto {
         width: 50%;
-        margin-left: 50px;
+        
     }
 }
 #appbar__arrow {
-    font-size: $font-l;
+    font-size: $font-xl;
+    margin-left: 15px;
 }
 
 @media (min-width: 768px) {
@@ -47,21 +50,26 @@ body {
         flex-direction: column;
         box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
         position: relative;
-        height: 60px;
+        height: 60px;  
 
         &__container--logo {
             width: 15%;
             @include flex-center;
         }
-    }/**** SASS restaurant la palette du goût DESKTOP****/
+    }
+
+    /**** SASS restaurant la palette du goût DESKTOP****/
 
     .appbar__restaurant {
         height: 95px;
+        display: flex;
+
 
         &__logo--resto {
             width: 20%;
             margin-left: 500px;
         }
+        }
     }
-}
+
 
