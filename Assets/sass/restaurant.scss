@@ -15,7 +15,7 @@ img.picture_restaurant {
   padding: 15px;
 }
 
-.top_container {
+.container__top {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -25,17 +25,17 @@ img.picture_restaurant {
     margin: 0;
     padding: 20px 0 0 20px;
     font-family: $font-title;
-    font-weight: 400;
-    font-size: 1.7rem;
-    line-height: 2.5rem;
+    font-weight: $font-b;
+    font-size: 27px;
+    line-height: 40px;
   }
 }
 
 .menu__container {
   &--h2none {
-    text-decoration: underline var(--turquoise);
-    text-underline-offset: 0.25rem;
-    text-decoration-thickness: 0.188rem;
+    text-decoration: underline $color-third;
+    text-underline-offset: 4px;
+    text-decoration-thickness: 3px;
   }
 }
 
@@ -60,41 +60,40 @@ img.picture_restaurant {
       flex-direction: column;
     }
   }
-
-
+}
+.menu__card{
   &--h3 {
-    font-size: 1.1rem;
+    font-size: $font-m;
     line-height: 21px;
-    font-weight: 500;
+    font-weight: $font-medium-b;
     margin: 0;
     display: inline;
   }
 
   &--description {
-    font-size: 1.1rem;
+    font-size: $font-m;
     line-height: 21px;
     display: inline;
     margin: 0;
   }
 
   &--p {
-    font-size: 0.9rem;
-    line-height: 17px;
-    font-weight: 700;
+    font-size: $font-s;
+    line-height: $font-line-s;
+    font-weight: $font-xlb;
   }
-
+}
+.menu__card{
   &--check {
     position: absolute;
-    font-size: 1.8rem;
+    font-size: $font-l;
     width: 18%;
     height: 15px;
     text-decoration: none;
     padding: 25px 0 30px 0;
     border-radius: 0 20px 20px 0;
-    background-color: var(--turquoise);
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: $color-third;
+    @include flex-all-center;
     overflow: hidden;
   }
 }
@@ -105,7 +104,7 @@ img.picture_restaurant {
 }
 
 #commander__button {
-  @include button
+  @include button;
 }
 
 @media screen and (min-width: 768px) {
@@ -120,11 +119,10 @@ img.picture_restaurant {
     &__top {
       margin: 0 200px;
       padding: 30px 0;
-      display: flex;
-      justify-content: center;
+      @include flex-center;
 
       &--icon {
-        padding-left: 60px
+        padding-left: 60px;
 
       }
     }
@@ -150,8 +148,7 @@ img.picture_restaurant {
   }
 
   .commander {
-    display: flex;
-    justify-content: center;
+    @include flex-center;
     transition: 50ms;
 
     &:hover {

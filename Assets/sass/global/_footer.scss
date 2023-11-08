@@ -21,13 +21,14 @@
       text-align: left;
       text-decoration: none;
 
+      
       a {
         font-family: $font-text;
         font-style: normal;
-        font-weight: var(--li-font-weight);
-        font-size: var(--li-font-size);
+        font-weight:$font-b;
+        font-size: $font-s;
         color: white;
-        line-height: var(--li-font-line-height);
+        line-height:$font-line-s;
         text-decoration: none;
       }
 
@@ -37,7 +38,7 @@
         text-decoration: none;
         font-family: $font-title;
         font-style: normal;
-        font-size: 1.2rem;
+        font-size: 19px;
         margin-bottom: 10px;
       }
     }
