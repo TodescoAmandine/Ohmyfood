@@ -5,6 +5,68 @@
 /* FONT SIZE */
 /* FONT WEIGHT */
 /* FONT LINE HEIGHT */
+@keyframes progresscheck {
+  from {
+    /*    transform: translateX(50px);*/
+    opacity: 0;
+    width: 0;
+  }
+  to {
+    opacity: 1;
+    width: 20%;
+  }
+}
+@keyframes rotate-check {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+@keyframes tarif {
+  from {
+    transform: translateX(0);
+    /*    transition: transform 0.3s ease 0.3s;*/
+  }
+  to {
+    transform: translateX(-90px);
+    /*  transition: transform 0.3s ease 0.3s;*/
+  }
+}
+@media screen and (min-width: 1024px) {
+  @keyframes tarif {
+    from {
+      transform: translateX(0);
+      /*    transition: transform 0.3s ease 0.3s;*/
+    }
+    to {
+      transform: translateX(-250px);
+      /*  transition: transform 0.3s ease 0.3s;*/
+      /*background-image: rgba($color: #980f0f, $alpha: 1);
+      width: 150px;
+      height: 50px;*/
+    }
+  }
+}
+@keyframes anim__entree {
+  0% {
+    transform: translateY(-500px);
+    opacity: 0;
+    display: none;
+    visibility: hidden;
+  }
+  40% {
+    opacity: 30%;
+  }
+  80% {
+    opacity: 70%;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 *::before, ::after {
   margin: 0;
   padding: 0;
@@ -37,17 +99,23 @@ body {
 }
 
 /***** SASS pour la palette du goût MOBILE*****/
-.appbar__restaurant {
+#appbar__resto {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 60px;
+}
+#appbar__resto .appbar__restaurant {
   box-shadow: none;
   height: 60px;
-  margin-left: 20px;
+  margin-left: 15px;
   align-items: center;
   display: flex;
   justify-content: center;
   gap: 60px;
   justify-content: flex-start;
 }
-.appbar__restaurant__logo--resto {
+#appbar__resto .appbar__restaurant__logo--resto {
   width: 50%;
 }
 
@@ -72,11 +140,10 @@ body {
   }
   /**** SASS restaurant la palette du goût DESKTOP****/
   .appbar__restaurant {
-    height: 95px;
-    display: flex;
+    height: 100px;
   }
-  .appbar__restaurant__logo--resto {
-    width: 20%;
+  .appbar__restaurant--logo {
+    width: 15%;
     margin-left: 500px;
   }
 }
@@ -128,6 +195,16 @@ body {
   margin: 0px 20px 0 0;
 }
 
+/****FOOTER LA PALETTE MOBILE *****/
+#footer__resto {
+  width: 100%;
+  background-color: #353535;
+  height: 200px;
+  position: absolute;
+  z-index: 3;
+  transform: translateY(1400px);
+}
+
 /******SASS FOOTER DESKTOP******/
 @media screen and (min-width: 768px) {
   .footer {
@@ -149,6 +226,14 @@ body {
   font-family: "Roboto";
 }
 
+h2 {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  color: black;
+}
+
 h3 {
   font-family: "Roboto";
   font-style: normal;
@@ -156,6 +241,28 @@ h3 {
   font-size: 24px;
   line-height: 27px;
   color: black;
+}
+
+/*******ANIMATION HEART*******/
+.heart__empty {
+  position: absolute;
+  color: black;
+}
+
+.heart__full {
+  opacity: 0;
+  position: absolute;
+  /*  transition-property: all;*/
+  transition-duration: 0.5s;
+}
+
+.heart__full:hover {
+  opacity: 1;
+  color: #FF79DA;
+  /*position: relative;*/
+  /*background-image: linear-gradient(180deg,#9356DC,#FF79DA);*/
+  background-clip: text;
+  -webkit-background-clip: text;
 }
 
 .main {
@@ -215,29 +322,13 @@ h3 {
   margin: 0;
 }
 .restaurant__container__card__content--icon {
-  margin-right: 20px;
+  margin-right: 30px;
 }
 .restaurant__container__card--image {
   height: 200px;
   width: 100%;
   object-fit: cover;
   border-radius: 20px 20px 0 0;
-}
-
-.heart__empty {
-  position: absolute;
-  color: #0d0d0d;
-}
-.heart__empty .heart__full {
-  opacity: 0;
-}
-.heart__empty__full:hover {
-  opacity: 1;
-  color: #FF79DA;
-  position: relative;
-  background-image: linear-gradient(180deg, #9356DC, #FF79DA);
-  background-clip: text;
-  -webkit-background-clip: text;
 }
 
 .main__bar__nav {
@@ -312,7 +403,7 @@ h3 {
   color: white;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(0deg, #9356DC, #FF79DA);
-  transition: 50ms;
+  transition: 0.5s;
 }
 .explore__button:hover {
   opacity: 0.85;
@@ -366,18 +457,27 @@ ol.choose__container__select {
   left: -15px;
 }
 
-#choose__container__select--icon1 {
+.choose__container__select--btn {
+  color: black;
+}
+
+.choose__container__select--icon {
   padding-left: 5px;
   margin: 0px 20px 0 0;
   color: #7E7E7E;
 }
-
-#choose__container__select--icon2 {
-  padding-left: 5px;
-  margin: 0px 20px 0 0;
+.choose__container__select--icon:hover {
   color: #9356DC;
+  /* box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.8);*/
 }
 
+/*
+#choose__container__select--icon2{
+  padding-left: 5px;
+  margin: 0px 20px 0 0;
+  color: $icon-colored
+}
+*/
 /* Le code ci-dessous correspond à la version responsive uniquement */
 @media screen and (min-width: 768px) {
   .main__bar__nav {

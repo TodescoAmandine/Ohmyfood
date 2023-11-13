@@ -61,7 +61,7 @@
         }
 
         &--icon {
-          margin-right: 20px;
+          margin-right: 30px;
         }
       }
 
@@ -75,23 +75,7 @@
   }
 }
 
-.heart__empty {
-  position: absolute;
-  color: #0d0d0d;
 
-  .heart__full {
-    opacity: 0;
-  }
-
-  &__full:hover {
-    opacity: 1;
-    color: $color-secondary;
-    position: relative;
-    background-image: linear-gradient(180deg,#9356DC,#FF79DA);
-    background-clip: text;
-    -webkit-background-clip: text;
-  }
-}
 
 .main__bar__nav {
   padding-top: 20px;
@@ -160,7 +144,7 @@
   color: white;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   background-image: linear-gradient(0deg,#9356DC,#FF79DA);
-  transition: 50ms;
+  transition: 0.5s;
 
   &:hover{
     opacity: 0.85;
@@ -212,18 +196,28 @@ ol.choose__container__select {
     left: -15px;
   }
 }
-
-#choose__container__select--icon1{
+.choose__container__select--btn {
+  color: black;
+}
+.choose__container__select--icon{
   padding-left: 5px;
   margin: 0px 20px 0 0;
-  color: $icon-dark
+  color: $icon-dark-icones;
+
+
+  &:hover{
+    color: $icon-colored;
+   /* box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.8);*/
+
+  }
 }
+/*
 #choose__container__select--icon2{
   padding-left: 5px;
   margin: 0px 20px 0 0;
   color: $icon-colored
 }
-
+*/
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 @media screen and (min-width: 768px) {

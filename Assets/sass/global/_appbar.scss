@@ -22,12 +22,19 @@ body {
             @include flex-center;
         }
     }
-}/***** SASS pour la palette du goût MOBILE*****/
+}
+/***** SASS pour la palette du goût MOBILE*****/
 
+#appbar__resto{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 60px;
+    
 .appbar__restaurant {
     box-shadow: none;
     height: 60px;
-    margin-left: 20px;
+    margin-left: 15px;
     align-items: center;
     @include flex-center;
     gap:60px;
@@ -35,7 +42,7 @@ body {
 
     &__logo--resto {
         width: 50%;
-        
+    } 
     }
 }
 #appbar__arrow {
@@ -61,12 +68,10 @@ body {
     /**** SASS restaurant la palette du goût DESKTOP****/
 
     .appbar__restaurant {
-        height: 95px;
-        display: flex;
+        height: 100px;
 
-
-        &__logo--resto {
-            width: 20%;
+        &--logo{
+            width: 15%;
             margin-left: 500px;
         }
         }
