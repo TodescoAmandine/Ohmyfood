@@ -1,0 +1,57 @@
+/*****lOADER 1******/
+.loader__container {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.50);
+    backdrop-filter: blur(10px);
+    animation: hide_loader 3s forwards;
+
+    img {
+        width: 100px;
+    }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #9356DC;
+    margin: 0 10px;
+    animation: loader infinite 0.3s alternate;
+  }
+}
+
+.loader__container {
+  .dot_2 {
+    animation-delay: 0.5s;
+  }
+
+  .dot_3 {
+    animation-delay: 1s;
+  }
+}
+
+
+@keyframes loader {
+  100% {
+      background: #dc566f;
+      transform: translateY(-30px)
+  }
+}
+
+
+@keyframes hide_loader {
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        display: none;
+    }
+}

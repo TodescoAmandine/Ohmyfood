@@ -5,57 +5,15 @@
 /* FONT SIZE */
 /* FONT WEIGHT */
 /* FONT LINE HEIGHT */
-@keyframes progresscheck {
-  from {
-    /*    transform: translateX(50px);*/
-    opacity: 0;
-    width: 0;
-  }
-  to {
-    opacity: 1;
-    width: 20%;
-  }
-}
 @keyframes rotate-check {
   from {
-    transform: rotate(0deg);
+    transform: rotate(300deg);
   }
   to {
     transform: rotate(360deg);
   }
 }
-@keyframes tarif {
-  from {
-    transform: translateX(0);
-    /*    transition: transform 0.3s ease 0.3s;*/
-  }
-  to {
-    transform: translateX(-90px);
-    /*  transition: transform 0.3s ease 0.3s;*/
-  }
-}
-@media screen and (min-width: 1024px) {
-  @keyframes tarif {
-    from {
-      transform: translateX(0);
-      /*    transition: transform 0.3s ease 0.3s;*/
-    }
-    to {
-      transform: translateX(-250px);
-      /*  transition: transform 0.3s ease 0.3s;*/
-      /*background-image: rgba($color: #980f0f, $alpha: 1);
-      width: 150px;
-      height: 50px;*/
-    }
-  }
-}
 @keyframes anim__entree {
-  0% {
-    transform: translateY(-500px);
-    opacity: 0;
-    display: none;
-    visibility: hidden;
-  }
   40% {
     opacity: 30%;
   }
@@ -65,6 +23,8 @@
   to {
     transform: translateY(0);
     opacity: 1;
+    display: block;
+    visibility: visible;
   }
 }
 *::before, ::after {
@@ -279,7 +239,6 @@ img.picture_restaurant {
   background-color: #F6F6F6;
   z-index: 100;
   position: absolute;
-  z-index: 2;
   width: 100%;
   transform: translateY(190px);
 }
@@ -325,7 +284,7 @@ img.picture_restaurant {
 /******ANIMATION MENU CARD CHECK******/
 .menu__card {
   cursor: pointer;
-  /* overflow: hidden;*/
+  overflow: hidden;
   border-radius: 20px;
   box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
   background-color: var(--greylight);
@@ -334,6 +293,25 @@ img.picture_restaurant {
   background: #fff;
   margin: 15px 15px 0 15px;
   position: relative;
+}
+.menu__card--h3 {
+  font-size: 17px;
+  line-height: 21px;
+  font-weight: 500;
+  margin: 0;
+  display: inline;
+  font-family: "Roboto";
+  text-overflow: ellipsis;
+  position: relative;
+}
+.menu__card--description {
+  font-size: 15px;
+  margin: 0;
+  padding-top: 10px;
+  font-weight: 300;
+  font-family: "Roboto";
+  position: relative;
+  text-overflow: ellipsis;
 }
 .menu__card__content {
   display: flex;
@@ -347,60 +325,51 @@ img.picture_restaurant {
   flex-direction: column;
   position: relative;
 }
-
-.menu__card--h3 {
-  font-size: 17px;
-  line-height: 21px;
-  font-weight: 500;
-  margin: 0;
-  display: inline;
-  font-family: "Roboto";
-  /*overflow: hidden;*/
-  text-overflow: ellipsis;
-  position: relative;
-}
-.menu__card--description {
-  font-size: 15px;
-  margin: 0;
-  padding-top: 10px;
-  font-weight: 300;
-  font-family: "Roboto";
-  position: relative;
-  text-overflow: ellipsis;
-}
-.menu__card--p {
+.menu__card__content--p {
   font-size: 15px;
   font-weight: 700;
   font-family: "Roboto";
   position: relative;
   top: 15px;
 }
-
-/***** BALISES CHECK & TARIF + ANIMATION CHECK & TARIF******/
+.menu__card__content--tarif {
+  transition: 1s all;
+}
 .menu__card--check {
   position: absolute;
   font-size: 18px;
   text-decoration: none;
-  height: 70px;
+  height: 71px;
+  width: 71px;
   border-radius: 0 20px 20px 0;
   background-color: #99E2D0;
-  right: 0px;
-  top: 0px;
-  transition: transform 1s ease-in-out 0.5s;
-  opacity: 0;
+  right: -72px;
+  top: 0;
+  opacity: 1;
   overflow: hidden;
   z-index: 1;
+  transition: 1s all;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.menu__card:hover .menu__card__content--tarif {
+  transform: translateX(-75px);
+}
+.menu__card:hover .menu__card--check {
+  right: 0px;
+}
+.menu__card:hover .menu__card--check .check {
+  animation: rotate-check 0.8s;
 }
 
+/***** BALISES CHECK & TARIF + ANIMATION CHECK & TARIF******/
 .check {
   display: flex;
   justify-items: center;
   align-items: center;
   color: white;
-  padding: 25px 0 0 25px;
   font-size: 20px;
-  animation: rotate-check 3s;
-  position: absolute;
 }
 
 .menu__card:hover .menu__card--check {
@@ -417,46 +386,36 @@ img.picture_restaurant {
   }
 }
 
-.menu__card:hover .menu__card__content--tarif {
-  animation: tarif 0.6s ease-in-out 0.1s normal both;
-}
-@media screen and (min-width: 1024px) {
-  .menu__card:hover .menu__card__content--tarif .menu__card:hover .menu__card__content--tarif {
-    animation: tarif 0s ease-in 0s normal both;
-  }
-}
-
 /*****ANIMATION DESCENTE CARDS*******/
-/* Je veux cacher les cards avant la descente
-.menu__plat1, .menu__plat2, .menu__plat3 ::before {
+.menu__card {
   visibility: hidden;
-}*/
-.menu__card.menu__entree1 {
-  animation: anim__entree 0.7s ease-in-out normal;
+  transform: translateY(-500px);
+  opacity: 0;
+  animation: anim__entree 0.7s ease-in-out normal forwards;
 }
 .menu__card.menu__entree2 {
-  animation: anim__entree 0.7s ease-in-out normal 0.2s;
+  animation-delay: 0.2s;
 }
 .menu__card.menu__entree3 {
-  animation: anim__entree 0.7s ease-in-out normal 0.3s;
+  animation-delay: 0.3s;
 }
 .menu__card.menu__plat1 {
-  animation: anim__entree 0.7s ease-in-out normal 0.5;
+  animation-delay: 0.5s;
 }
 .menu__card.menu__plat2 {
-  animation: anim__entree 0.7s ease-in-out normal 0.7s;
+  animation-delay: 0.7s;
 }
 .menu__card.menu__plat3 {
-  animation: anim__entree 0.7s ease-in-out normal 0.9s;
+  animation-delay: 0.9s;
 }
 .menu__card.menu__dessert1 {
-  animation: anim__entree 0.7s ease-in-out normal 1.1s;
+  animation-delay: 1.1s;
 }
 .menu__card.menu__dessert2 {
-  animation: anim__entree 0.7s ease-in-out normal 1.3s;
+  animation-delay: 1.3s;
 }
 .menu__card.menu__dessert3 {
-  animation: anim__entree 0.7s ease-in-out normal 1.5s;
+  animation-delay: 1.5s;
 }
 
 /******BOUTON COMMANDER*******/
