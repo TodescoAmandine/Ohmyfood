@@ -53,7 +53,8 @@ body {
   justify-content: center;
 }
 .appbar__container--logo {
-  width: 50%;
+  /* width: 50%;*/
+  width: 150px;
   display: flex;
   justify-content: center;
 }
@@ -75,8 +76,8 @@ body {
   gap: 60px;
   justify-content: flex-start;
 }
-#appbar__resto .appbar__restaurant__logo--resto {
-  width: 50%;
+#appbar__resto .appbar__restaurant--logo {
+  width: 150px;
 }
 
 #appbar__arrow {
@@ -94,7 +95,7 @@ body {
     height: 60px;
   }
   .appbar__container--logo {
-    width: 15%;
+    /*width: 15%;*/
     display: flex;
     justify-content: center;
   }
@@ -103,8 +104,8 @@ body {
     height: 100px;
   }
   .appbar__restaurant--logo {
-    width: 15%;
-    margin-left: 500px;
+    /*width: 150px;*/
+    margin-left: 250px;
   }
 }
 /********SASS FOOTER MOBILE********/
@@ -249,6 +250,7 @@ h3 {
   background: #9356DC;
   margin: 0 10px;
   animation: loader infinite 0.3s alternate;
+  margin-top: 10px;
 }
 
 .loader__container .dot_2 {
@@ -260,7 +262,7 @@ h3 {
 
 @keyframes loader {
   100% {
-    background: #dc566f;
+    background: #99E2D0;
     transform: translateY(-30px);
   }
 }

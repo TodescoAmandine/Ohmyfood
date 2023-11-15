@@ -23,6 +23,7 @@
     background: #9356DC;
     margin: 0 10px;
     animation: loader infinite 0.3s alternate;
+    margin-top: 10px;
   }
 }
 
@@ -39,7 +40,7 @@
 
 @keyframes loader {
   100% {
-      background: #dc566f;
+      background: $color-third;
       transform: translateY(-30px)
   }
 }
