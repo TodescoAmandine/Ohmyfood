@@ -1,0 +1,23 @@
+/***** BALISES CHECK & TARIF + ANIMATION CHECK & TARIF******/
+
+.check {
+    @include flex-all-center;
+    color: white;
+    font-size: 20px;
+  }
+  
+  .menu__card {
+    &:hover .menu__card--check {
+      animation: progresscheck 1000ms;
+      animation-fill-mode: forwards;
+  
+      @media screen and (min-width: 1024px) {
+        .menu__card {
+          &:hover .menu__card--check {
+            animation: progresscheck 2000ms ease-in-out 0.8s;
+            animation-fill-mode: forwards;
+          }
+        }
+      }
+    }
+  }

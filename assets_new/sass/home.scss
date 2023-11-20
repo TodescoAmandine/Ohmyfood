@@ -5,6 +5,7 @@
   margin-bottom: 40px;
 }
 
+/*CARDS RESTAURANTS index.html*/
 .restaurant {
   padding: 20px 17px;
   background-color: $grey-light;
@@ -22,7 +23,7 @@
       background-color: white;
       border-radius: 20px;
       filter: drop-shadow(0px 3px 15px rgba(0, 0, 0, 0.1));
-/**vignette nouveau***/
+/*vignette nouveau*/
       &--nouveau {
         position: absolute;
         top: 10px;
@@ -57,7 +58,7 @@
           margin-bottom: 4px;
         }
 
-        &--txt {
+        &--city {
           margin: 0;
         }
 
@@ -77,7 +78,7 @@
 }
 
 
-
+/**BAR NAV LOCATION**/
 .main__bar__nav {
   padding-top: 20px;
   @include flex-center;
@@ -87,6 +88,7 @@
   background-color: $grey-input;
   padding-left: 30px;
 }
+/*ICONE LOCATION*/
 .fa-location-dot{
   color:$color-dark;
 }
@@ -112,6 +114,7 @@
   text-align: center;
 }
 
+/**SECTION EXPLORE TITRE ET BOUTON**/
 .explore{
   margin: 0;
   display: flex;
@@ -133,7 +136,7 @@
   padding-bottom: 30px;
 }
 
-/**anim btn explore**/
+/*HOVER BOUTON EXPLORE*/
 .explore__button{
   text-decoration: none;
   margin: 20px 0px;
@@ -151,14 +154,14 @@
     opacity: 0.85;
   }
 }
-/**fontionnement**/
+/**SECTION FONCTIONNEMENT OU CHOOSE**/
 .choose{
   @include flex-center;
   flex-direction: column;
   padding: 30px 10px;
 }
 
-
+/*LISTE FONTIONNEMENT OU CHOOSE*/
 ol.choose__container__select {
   padding-inline-start: 20px;
   @include flex-all-center;
@@ -182,7 +185,7 @@ ol.choose__container__select {
   line-height: $font-line-s;
   position: relative;
   counter-increment: compteur;
-
+/*PURPLE CIRCLE*/
   &::before {
     margin-right: 1rem;
     content: "" counter(compteur);
@@ -197,37 +200,31 @@ ol.choose__container__select {
     left: -15px;
   }
 }
-.choose__container__select--btn {
-  color: black;
-}
-.choose__container__select--icon{
-  padding-left: 5px;
-  margin: 0px 20px 0 0;
-  color: $icon-dark-icones;
-
-
-  &:hover{
-    color: $icon-colored;
-   /* box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.8);*/
-
+/**BOUTONS FONTIONNEMENT OU CHOOSE**/
+  .choose__container__select--btn {
+    color: black;
   }
-}
-/*
-#choose__container__select--icon2{
-  padding-left: 5px;
-  margin: 0px 20px 0 0;
-  color: $icon-colored
-}
-*/
+  .choose__container__select--icon{
+    padding-left: 5px;
+    margin: 0px 20px 0 0;
+    color: $icon-dark-icones;
+    &:hover{
+      color: $icon-colored;
+    }
+  }
+
 
 /* Le code ci-dessous correspond à la version responsive uniquement */
 @media screen and (min-width: 768px) {
+/**SECTION BAR NAV**/
   .main__bar__nav{
     font-size: $font-s;
     line-height: $font-line-s;
     font-weight: $font-medium-b;
     font-family: $font-text;
   }
+
+/**SECTION EXPLORE**/
   .explore{
     height: auto;
 
@@ -237,12 +234,13 @@ ol.choose__container__select {
     }
   }
 
+/**SECTION FONCTIONNEMENT OU CHOOSE**/
   .choose{
     @include flex-center;
     flex-direction: column;
     padding: 0 180px;
   }
-
+/*BOUTONS*/
   ol.choose__container__select {
     display: grid;
     grid-template-columns: 33% 33% 33%;
@@ -250,7 +248,7 @@ ol.choose__container__select {
     justify-content: space-between;
     padding-left: 0;
   }
-
+/*PURPLE CIRCLE*/
   ol li::before{
     left: -12px;
   }
@@ -258,7 +256,7 @@ ol.choose__container__select {
   .choose__select--btn{
     position: relative;
   }
-
+/**SECTION CARDS RESTAURANT**/
   .restaurant{
     padding: 30px 180px 30px 180px;
     margin:50px 0;

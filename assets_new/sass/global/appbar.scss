@@ -4,7 +4,7 @@ body {
     box-sizing: border-box;
 }
 
-/******SASS pour appbar Index.html MOBILE******/
+/******SASS pour appbar Index.html - MOBILE******/
 
 .appbar {
     display: flex;
@@ -18,13 +18,28 @@ body {
         @include flex-center;
 
         &--logo {
-           /* width: 50%;*/
            width:150px;
             @include flex-center;
         }
     }
 }
-/***** SASS pour la palette du goût MOBILE*****/
+
+@media (min-width: 768px) {
+    /*****SASS index.html - DESKTOP*****/
+    .appbar {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
+        position: relative;
+        height: 60px;  
+
+        &__container--logo {
+            @include flex-center;
+        }
+    }
+
+
+/***** SASS pour la palette du goût - MOBILE*****/
 
 #appbar__resto{
     display: flex;
@@ -51,31 +66,18 @@ body {
     margin-left: 15px;
 }
 
-@media (min-width: 768px) {
-    /*****SASS index.html DESKTOP*****/
-    .appbar {
-        display: flex;
-        flex-direction: column;
-        box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.25);
-        position: relative;
-        height: 60px;  
 
-        &__container--logo {
-            /*width: 15%;*/
-            @include flex-center;
-        }
+
+    /**** SASS restaurant la palette du goût - DESKTOP****/
+
+.appbar__restaurant {
+    height: 100px;
+
+    &--logo{
+        width: 150px;
+        margin-left:550px;
     }
-
-    /**** SASS restaurant la palette du goût DESKTOP****/
-
-    .appbar__restaurant {
-        height: 100px;
-
-        &--logo{
-            /*width: 150px;*/
-            margin-left:250px;
-        }
-        }
     }
+}
 
 

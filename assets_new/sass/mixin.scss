@@ -1,3 +1,4 @@
+/**MIXIN**/
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -37,6 +38,7 @@
 }
 }
 
+/**KEYFRAMES**/
 @keyframes rotate-check{
 from{
   transform: rotate(300deg);
